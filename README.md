@@ -1,1 +1,1 @@
-# newProject
+# New project scaffolding
