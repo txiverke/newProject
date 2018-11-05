@@ -2,7 +2,7 @@
   "name": "newproject",
   "version": "1.0.0",
   "description": "Javascript new project scaffolding",
-  "main": "index.js",
+  "main": "server.js",
   "repository": "https://github.com/txiverke/newProject.git",
   "author": "Xavier Vila <xavi.vila.albiol@gmail.com>",
   "license": "MIT",

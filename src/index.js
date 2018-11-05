@@ -1,3 +1,5 @@
-const sum = (x = 1, y = 1) => x + y
+import config from './config'
 
-export default sum
+const enviroment = () => config.env
+
+export default enviroment
