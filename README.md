@@ -22,5 +22,5 @@ $ yarn start
 ```
 ## Production build
 ```bash
-$ yarn prod:build
+$ yarn build:prod
 ```
