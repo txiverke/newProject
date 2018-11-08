@@ -2,10 +2,12 @@ const webpack = require('webpack')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const webpackMerge = require('webpack-merge')
 
-const modeConfig = env => require(`./build-utils/webpack.${env}`)(__dirname)
+const modeConfig = env => require(`./build-utils/webpack.${env}`)(env)
+const presetConfig = require("./build-utils/loadPresets");
 
-module.exports = ({ mode, presets } = { mode: 'production', presets: [] }) => 
-  webpackMerge( // Object.assign for webpack
+
+module.exports = ({ mode, presets } = { mode: "production", presets: [] }) => {
+  return webpackMerge(
     {
       mode,
       output: {
@@ -13,7 +15,16 @@ module.exports = ({ mode, presets } = { mode: 'production', presets: [] }) =>
       },
       module: {
         rules: [
-          { test: /\.(js|jsx)$/, use: 'babel-loader', exclude: '/node_modules/' },
+          { 
+            test: /\.(js|jsx)$/, 
+            use: 'babel-loader', 
+            exclude: '/node_modules/' 
+          },
+          { 
+            test:/\.jpe?g$/, 
+            use: [
+              { loader: "url-loader", options: { limit: 5000 } }]
+          }
         ],
       },
       plugins: [
@@ -22,4 +33,6 @@ module.exports = ({ mode, presets } = { mode: 'production', presets: [] }) =>
       ],
     },
     modeConfig(mode),
+    presetConfig({ mode, presets: presets || [] })
   )
+}
