@@ -1,7 +1,4 @@
 const config = {
-  dev: 'development',
-  test: 'test',
-  prod: 'production',
   env: process.env.NODE_ENV || 'development',
 }
 
@@ -12,7 +9,7 @@ try {
     config.env = 'testing'
   }
   // eslint-disable-next-line
-  envConfig = require(`./${config.env}`)
+  envConfig = require(`./${config.env}`).default
 } catch (e) {
   envConfig = {}
 }

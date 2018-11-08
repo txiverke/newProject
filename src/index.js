@@ -1,5 +1,5 @@
 import config from './config'
 
-const enviroment = () => config.env
+const env = () => config.env
 
-export default enviroment
+export default env
