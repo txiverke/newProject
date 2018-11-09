@@ -1,9 +1,9 @@
 {
-  "name": "newproject",
+  "name": "abluelemon",
   "version": "1.0.0",
-  "description": "Javascript new project scaffolding",
+  "description": "A blue lemon productions web app",
   "main": "./src/client/index.js",
-  "repository": "https://github.com/txiverke/newProject.git",
+  "repository": "https://github.com/txiverke/abluelemon.git",
   "author": "Xavier Vila <xavi.vila.albiol@gmail.com>",
   "license": "MIT",
   "scripts": {
