@@ -1,3 +1,4 @@
+// eslint-disable-next-line
 import env from '../index'
 
 describe('Tests work as expected', () => {
