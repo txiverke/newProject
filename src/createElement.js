@@ -11,11 +11,9 @@ const createElement = (tag, label = '', styles = '', attrs = []) => {
 
   if (label) elem.innerText = String(label)
 
-  if (styles) elem.classList.add = styles
+  if (styles) styles.split(' ').map(style => elem.classList.add(style))
 
-  if (attrs.length) {
-    attrs.forEach(attr => elem.setAttribute(attr.key, attr.value))
-  }
+  if (attrs.length) attrs.forEach(attr => elem[attr.key] = attr.value)
 
   return elem
 }

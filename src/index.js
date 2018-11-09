@@ -1,10 +1,9 @@
 import config from './config'
 import './body.css'
 import './index.css'
-import logo from './js_logo.jpg'
+import logo from './assets/imgs/js_logo.jpg'
 
 const env = () => config.env
-// eslint-disable-next-line
 const ce = () => import('./createElement')
 
 /**
@@ -17,14 +16,15 @@ const ce = () => import('./createElement')
  * in the main bundle.
  */
 window.addEventListener('scroll', () => {
-  ce().then(module => {
-    const img = module.default('img', null, null, [
+  ce()
+    .then(module => {
+      const img = module.default('img', null, 'test test1', [
       { 'key': 'src', 'value': logo},
-      { 'key': 'alt', 'value': 'Javascript logo' }
+      { 'key': 'alt', 'value': 'JavaScript logo' }
     ])
 
     document.body.appendChild(img)
-  })
+    })
 })
 
 const title = document.createElement('h1')
