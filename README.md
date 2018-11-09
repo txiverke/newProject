@@ -13,7 +13,7 @@
 * [jest](https://jestjs.io/)
 * [nodemon](https://nodemon.io/)
 
-## Getting started
+## Getting started (webpack dev server)
 ```bash
 $ git clone https://github.com/txiverke/newProject.git <YOUR_FOLDER_NAME>
 $ cd <YOUR_FOLDER_NAME>
@@ -23,4 +23,13 @@ $ yarn start
 ## Production build
 ```bash
 $ yarn prod:build
+```
+
+## Start static server (production)
+```bash
+$ yarn prod:start
+```
+## Stop static server (production)
+```bash
+$ yarn prod:stop
 ```
