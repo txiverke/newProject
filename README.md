@@ -1,5 +1,5 @@
 # New project's boilerplate
-Repository with boilerplate to start projects in development and in production.
+Repository with boilerplate to start projects in development and production.
 
 ## Pre requirements
 * [Node.js](https://nodejs.org/)
